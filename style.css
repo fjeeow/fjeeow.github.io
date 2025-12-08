@@ -1,0 +1,159 @@
+		*{
+ margin : 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    margin: 0px;
+    height: 100%;
+    background-color: white;
+}
+
+container {
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+h1 {
+    display: inline-block;
+    writing-mode: vertical-rl;
+    font-family: sans-serif;
+    font-size: 130pt;
+    color: red;
+    letter-spacing: -2pt;
+    position: fixed;
+    bottom: 0%;
+    right: 0.9%;
+    white-space: nowrap;
+    text-orientation: sideways;
+}
+.flow-text {
+      display: flex;
+      flex: 0 0 auto;
+      white-space: nowrap;
+      overflow: nowrap;
+  }
+ 
+  .flow-wrap {
+    animation: textLoop 20s linear infinite;
+  }
+  
+  @keyframes textLoop {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(0, -147%, 0);
+      transform: translate3d(0, -147%, 0);
+    }
+  }
+
+h2 {
+    display: inline-block;
+    writing-mode: vertical-rl;
+    animation: text-to-top 250s linear infinite;
+    font-family: sans-serif;
+    font-size: 28pt;
+    color: red;
+    writing-mode: vertical-rl;
+    text-align: left;
+    position: absolute;
+    white-space: nowrap;
+}
+
+h3 {
+    display: inline-block;
+    writing-mode: vertical-rl;
+    font-family: sans-serif;
+    font-size: 60pt;
+    color: red;
+    letter-spacing: -2pt;
+    position: fixed;
+    bottom: 0%;
+    left: 13%;
+    white-space: nowrap;
+    text-orientation: sideways;
+}
+.flow-text_2 {
+      display: flex;
+      flex: 0 0 auto;
+      white-space: nowrap;
+      overflow: nowrap;
+  }
+ 
+  .flow-wrap_2 {
+    animation: textLoop 50s linear infinite;
+  }
+  
+  @keyframes textLoop {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(0, -400%, 0);
+      transform: translate3d(0, -400%, 0);
+    }
+  }
+
+span = "contact" {
+    background-color: yellow;
+}
+.yellow{
+    background-color: yellow;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 50pt;
+    line-height: 90%;
+    word-break: ;
+    color: red;
+}
+
+
+
+ul {
+    list-style: none;
+    font-size: 10pt;
+    font-family: sans-serif;
+    color: red;
+
+}
+
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400%;
+    z-index: -10;
+    margin-top: 0%;
+    top: 190%;
+    display: block;
+}
+
+div {
+    position: absolute;
+    width: px;
+    height: px;
+    background-color: ;
+    border: ;
+    border-radius: %;
+}
+
+table, th, tr, td {
+    border: 1px black solid;
+    border-collapse: collapse;
+    width: 200px;
+    height: 20px;
+}
+
+@media screen and (max-width: 704px) {
+    
+}
