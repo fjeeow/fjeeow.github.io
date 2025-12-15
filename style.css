@@ -108,28 +108,42 @@ span = "contact" {
     background-color: yellow;
 }
 
-p {
-    font-family: sans-serif;
-    font-size: 10pt;
-}
-
-a:link {
+.links a {
+  font-family: sans-serif;
+  font-size: 18pt;
   color: red;
-  text-decoration-line: none;
-}
-a:visited {
-  color : red;
-  text-decoration-line: none;
-}
-a:hover {
-  color : red;
-  text-decoration-line: none;
-}
-a:active {
-  color : black;
-  text-decoration-line: none;
-}
+  text-decoration: none;
 
+  white-space: nowrap;        /* 각 링크 내부 줄바꿈 방지 */
+  word-break: keep-all;       /* 한글 깨짐 방지 */
+
+  letter-spacing: 0px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+.links a:last-child {
+  margin-right: 0;
+}
+.links a:link,
+.links a:visited,
+.links a:hover {
+  color: red;
+  text-decoration: none;
+}
+.links a:active {
+  color: black;
+}
+.links a:nth-child(1) {
+  margin-right: 200px;
+}
+.links a:nth-child(2) {
+  margin-right: 500px;
+}
+.links a:nth-child(3) {
+  margin-right: 600px;
+}
 ul {
     list-style: none;
     font-size: 10pt;
@@ -340,6 +354,7 @@ table, th, tr, td {
 .t48 { left: 22%; --land: -300px; animation-duration: 3.5s; }
 .t49 { left: 49%; --land: -300px; animation-duration: 4s; }
 .t50 { left: 61%; --land: -300px; animation-duration: 3.5s; }
+.t51 { left: 52%; --land: -300px; animation-duration: 3s; }
 
 .fall:hover {
     transform: translateX(-2px);
@@ -352,72 +367,242 @@ table, th, tr, td {
 }
 
 #explode:checked ~ .t2 {
-    transform: translateX(-400px);
+    transform: translateX(-800px);
     transition-delay: 1s;
 }
 #explode:checked ~ .t4 {
-    transform: translateX(-400px);
+    transform: translateX(-800px);
     transition-delay: 0.9s;
 }
 #explode:checked ~ .t5 {
-    transform: translateX(-400px);
+    transform: translateX(-800px);
     transition-delay: 1.2s;
 }
 #explode:checked ~ .t7 {
-    transform: translateX(-400px);
+    transform: translateX(-800px);
     transition-delay: 1.3s;
 }
 #explode:checked ~ .t8 {
-    transform: translateX(-400px);
+    transform: translateX(-800px);
     transition-delay: 1.4s;
 }
 #explode:checked ~ .t11 {
-    transform: translateX(-400px);
+    transform: translateX(-800px);
     transition-delay: 1.5s;
 }
 #explode:checked ~ .t12 {
-    transform: translateX(-400px);
+    transform: translateX(-800px);
     transition-delay: 1.6s;
 }
 #explode:checked ~ .t13 {
-    transform: translateX(-400px);
+    transform: translateX(-800px);
+    transition-delay: 0.8s;
+}
+#explode:checked ~ .t18 {
+    transform: translateX(-800px);
+    transition-delay: 1s;
+}
+#explode:checked ~ .t24 {
+    transform: translateX(-800px);
+    transition-delay: 0.9s;
+}
+#explode:checked ~ .t25 {
+    transform: translateX(-800px);
+    transition-delay: 1.2s;
+}
+#explode:checked ~ .t26 {
+    transform: translateX(-800px);
+    transition-delay: 1.3s;
+}
+#explode:checked ~ .t27 {
+    transform: translateX(-800px);
+    transition-delay: 1.4s;
+}
+#explode:checked ~ .t31 {
+    transform: translateX(-800px);
+    transition-delay: 1.5s;
+}
+#explode:checked ~ .t32 {
+    transform: translateX(-800px);
+    transition-delay: 1.6s;
+}
+#explode:checked ~ .t40 {
+    transform: translateX(-800px);
+    transition-delay: 0.8s;
+}
+#explode:checked ~ .t2 {
+    transform: translateX(-800px);
+    transition-delay: 1s;
+}
+#explode:checked ~ .t42 {
+    transform: translateX(-800px);
+    transition-delay: 0.9s;
+}
+#explode:checked ~ .t43 {
+    transform: translateX(-800px);
+    transition-delay: 1.2s;
+}
+#explode:checked ~ .t44 {
+    transform: translateX(-800px);
+    transition-delay: 1.3s;
+}
+#explode:checked ~ .t45 {
+    transform: translateX(-800px);
+    transition-delay: 1.4s;
+}
+#explode:checked ~ .t46 {
+    transform: translateX(-800px);
+    transition-delay: 1.5s;
+}
+#explode:checked ~ .t47 {
+    transform: translateX(-800px);
+    transition-delay: 1.6s;
+}
+#explode:checked ~ .t48 {
+    transform: translateX(-800px);
+    transition-delay: 0.8s;
+}
+#explode:checked ~ .t49 {
+    transform: translateX(-800px);
+    transition-delay: 0.8s;
+}
+#explode:checked ~ .t50 {
+    transform: translateX(-800px);
     transition-delay: 0.8s;
 }
 
 
 #explode:checked ~ .t1 {
-    transform: translateX(400px);
+    transform: translateX(800px);
     transition-delay: 1s;
 }
 #explode:checked ~ .t3 {
-    transform: translateX(400px);
+    transform: translateX(800px);
     transition-delay: 0.9s;
 }
 #explode:checked ~ .t6 {
-    transform: translateX(400px);
+    transform: translateX(800px);
     transition-delay: 1.2s;
 }
 #explode:checked ~ .t9 {
-    transform: translateX(400px);
+    transform: translateX(800px);
     transition-delay: 1.3s;
 }
 #explode:checked ~ .t10 {
-    transform: translateX(400px);
+    transform: translateX(800px);
     transition-delay: 1.4s;
 }
-#explode:checked ~ .t3 {
-    transform: translateX(400px);
+#explode:checked ~ .t14 {
+    transform: translateX(800px);
     transition-delay: 1.55s;
 }
-#explode:checked ~ .t1 {
-    transform: translateX(400px);
+#explode:checked ~ .t15 {
+    transform: translateX(800px);
     transition-delay: 1.6s;
 }
-#explode:checked ~ .t3 {
-    transform: translateX(400px);
+#explode:checked ~ .t16 {
+    transform: translateX(800px);
+    transition-delay: 0.8s;
+}
+#explode:checked ~ .t17 {
+    transform: translateX(800px);
+    transition-delay: 0.8s;
+}
+#explode:checked ~ .t19 {
+    transform: translateX(800px);
+    transition-delay: 1s;
+}
+#explode:checked ~ .t20 {
+    transform: translateX(800px);
+    transition-delay: 0.9s;
+}
+#explode:checked ~ .t21 {
+    transform: translateX(800px);
+    transition-delay: 1.2s;
+}
+#explode:checked ~ .t22 {
+    transform: translateX(800px);
+    transition-delay: 1.3s;
+}
+#explode:checked ~ .t23 {
+    transform: translateX(800px);
+    transition-delay: 1.4s;
+}
+#explode:checked ~ .t28 {
+    transform: translateX(800px);
+    transition-delay: 1.55s;
+}
+#explode:checked ~ .t29 {
+    transform: translateX(800px);
+    transition-delay: 1.6s;
+}
+#explode:checked ~ .t30 {
+    transform: translateX(800px);
+    transition-delay: 0.8s;
+}
+#explode:checked ~ .t33 {
+    transform: translateX(800px);
+    transition-delay: 1s;
+}
+#explode:checked ~ .t34 {
+    transform: translateX(800px);
+    transition-delay: 0.9s;
+}
+#explode:checked ~ .t35 {
+    transform: translateX(800px);
+    transition-delay: 1.2s;
+}
+#explode:checked ~ .t36 {
+    transform: translateX(800px);
+    transition-delay: 1.3s;
+}
+#explode:checked ~ .t37 {
+    transform: translateX(800px);
+    transition-delay: 1.4s;
+}
+#explode:checked ~ .t38 {
+    transform: translateX(800px);
+    transition-delay: 1.55s;
+}
+#explode:checked ~ .t39 {
+    transform: translateX(800px);
+    transition-delay: 1.6s;
+}
+#explode:checked ~ .t41 {
+    transform: translateX(800px);
+    transition-delay: 0.8s;
+}
+#explode:checked ~ .t51 {
+    transform: translateX(800px);
     transition-delay: 0.8s;
 }
 
+#explode:checked ~ .links {
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 1.2s; /* 폭발(transition) 총 시간에 맞춰 조정 */
+}
+
+.links {
+  position: fixed;
+  bottom: -300px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;              /* 핵심 */
+  flex-direction: row;
+  flex-wrap: nowrap;          /* 줄바꿈 금지 */
+  align-items: center;
+  justify-content: center;
+  gap: 0;                  /* 링크 간 간격 (margin 대신) */
+
+  white-space: nowrap;        /* 이중 안전장치 */
+  opacity: 0;
+  pointer-events: none;
+  z-index: 999;
+
+  transition: opacity 1.3s ease;
+}
 
 @media screen and (max-width: 704px) {
 
