@@ -110,13 +110,25 @@ span = "contact" {
 
 p {
     font-family: sans-serif;
-    font-size: 50pt;
-    line-height: 90%;
-    word-break: ;
-    color: red;
+    font-size: 10pt;
 }
 
-
+a:link {
+  color: red;
+  text-decoration-line: none;
+}
+a:visited {
+  color : red;
+  text-decoration-line: none;
+}
+a:hover {
+  color : red;
+  text-decoration-line: none;
+}
+a:active {
+  color : black;
+  text-decoration-line: none;
+}
 
 ul {
     list-style: none;
@@ -128,14 +140,12 @@ ul {
 
 img {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 400%;
-    z-index: -10;
+    transform: translate(-65%, -23.5%);
+    height: 2300%;
     margin-top: 0%;
     top: 190%;
     display: block;
+    z-index: -10;
 }
 
 div {
@@ -155,6 +165,258 @@ table, th, tr, td {
 }
 
 
+.stage {
+    position: fixed;
+    top: 60%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+}
+.stage input {
+    display: none;
+}
+.btn {
+    position: absolute;
+    inset: 0;
+    display: none;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#s1:checked ~ .step1 { 
+    display: block;
+    background-image: url("https://d2w9rnfcy7mm78.cloudfront.net/41794851/original_e5a78fb0cf6b9ebe0037c26001219ca0.png");
+}
+
+#s2:checked ~ .step2 { 
+    display: block;
+    background-image: url("https://d2w9rnfcy7mm78.cloudfront.net/41794853/original_cffa04344ca780cd5745349e50537fdb.png");
+}
+
+#s3:checked ~ .step3 { 
+    display: block;
+    background-image: url("https://d2w9rnfcy7mm78.cloudfront.net/41794854/original_1314a41322f4063f8860e66b0c9463ea.png");
+}
+
+#s4:checked ~ .step4 { 
+    display: block;
+    background-image: url("https://d2w9rnfcy7mm78.cloudfront.net/41794852/original_f875991f4763b1b433b47768690a71bb.png");
+    animation: blinkDrop 3s forwards;
+}
+
+#s4:checked ~ .bg-img {
+    animation: imgScroll 2s linear forwards;
+    animation-delay: 3s;
+}
+
+#s4:checked ~ .pile .fall {
+    animation-name: fallDown;
+    animation-delay: 5s;   /* 이미지 스크롤 종료 시점 */
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    opacity: 1;
+}
+
+@keyframes blinkDrop {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* 깜박임 */
+  15% { opacity: 0; }
+  30% { opacity: 1; }
+  45% { opacity: 0; }
+  60% { opacity: 1; }
+
+  /* 낙하 시작 */
+  80% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  /* 완전 소멸 */
+  100% {
+    transform: translateY(200px);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes imgScroll {
+  0% {
+    transform: translate(-65%, -23.5%) translateY(0%);
+  }
+  100% {
+    transform: translate(-65%, -23.5%) translateY(-70.5%);
+  }
+}
+
+.stage {
+    position: fixed;
+    top: 60%;
+    left: 65%;
+    width: 150px;
+    height: 150px;
+}
+.pile {
+    position: absolute;
+    left: -65vw;      /* stage 기준에서 화면 전체로 확장 */
+    bottom: -60vh;
+    width: 100vw;
+    height: 40vh;
+    pointer-events: auto;
+}
+.fall {
+    position: absolute;
+    top: -100vh;
+    font-family: sans-serif;
+    font-size: 20pt;
+    color: white;
+    white-space: nowrap;
+    cursor: pointer;
+    opacity: 0;
+}
+
+@keyframes fallDown {
+  from {
+    top: -100vh;
+  }
+  to {
+    top: calc(100% + var(--land));
+  }
+}
+
+.t1 { left: 70%; --land: -301px; animation-duration: 3.2s; }
+.t2 { left: 42%; --land: -302px; animation-duration: 3.8s; }
+.t3 { left: 63%; --land: -303px; animation-duration: 4.4s; }
+.t4 { left: 31%; --land: -302px; animation-duration: 5s; }
+.t5 { left: 35%; --land: -300px; animation-duration: 4.5s; }
+.t6 { left: 80%; --land: -300px; animation-duration: 3.1s; }
+.t7 { left: 48%; --land: -304px; animation-duration: 4.7s; }
+.t8 { left: 26%; --land: -300px; animation-duration: 3.8s; }
+.t9 { left: 61%; --land: -300px; animation-duration: 3.6s; }
+.t10 { left: 69%; --land: -301px; animation-duration: 4.5s; }
+.t11 { left: 27%; --land: -300px; animation-duration: 3.9s; }
+.t12 { left: 33%; --land: -300px; animation-duration: 3s; }
+.t13 { left: 39%; --land: -305px; animation-duration: 5s; }
+.t14 { left: 56%; --land: -300px; animation-duration: 4.2s; }
+.t15 { left: 53%; --land: -303px; animation-duration: 3.5s; }
+.t16 { left: 78%; --land: -300px; animation-duration: 3.2s; }
+.t17 { left: 76%; --land: -302px; animation-duration: 3.1s; }
+.t18 { left: 43%; --land: -300px; animation-duration: 3.6s; }
+.t19 { left: 74%; --land: -300px; animation-duration: 3.9s; }
+.t20 { left: 65%; --land: -300px; animation-duration: 3.5s; }
+.t21 { left: 66%; --land: -300px; animation-duration: 4.3s; }
+.t22 { left: 55%; --land: -300px; animation-duration: 3.7s; }
+.t23 { left: 84%; --land: -300px; animation-duration: 4.3s; }
+.t24 { left: 32%; --land: -300px; animation-duration: 4.1s; }
+.t25 { left: 21%; --land: -300px; animation-duration: 3.3s; }
+.t26 { left: 45%; --land: -300px; animation-duration: 4.8s; }
+.t27 { left: 37%; --land: -300px; animation-duration: 4.5s; }
+.t28 { left: 52%; --land: -300px; animation-duration: 3s; }
+.t29 { left: 58%; --land: -300px; animation-duration: 4s; }
+.t30 { left: 67%; --land: -300px; animation-duration: 3.5s; }
+.t31 { left: 24%; --land: -300px; animation-duration: 3.9s; }
+.t32 { left: 23%; --land: -300px; animation-duration: 3s; }
+.t33 { left: 83%; --land: -300px; animation-duration: 3.1s; }
+.t34 { left: 57%; --land: -300px; animation-duration: 4.2s; }
+.t35 { left: 52.7%; --land: -300px; animation-duration: 4.5s; }
+.t36 { left: 51%; --land: -300px; animation-duration: 3.2s; }
+.t37 { left: 64%; --land: -300px; animation-duration: 3.1s; }
+.t38 { left: 79%; --land: -300px; animation-duration: 3.6s; }
+.t39 { left: 71%; --land: -300px; animation-duration: 3.9s; }
+.t40 { left: 34%; --land: -300px; animation-duration: 3.5s; }
+.t41 { left: 60%; --land: -300px; animation-duration: 4.3s; }
+.t42 { left: 41%; --land: -300px; animation-duration: 3.7s; }
+.t43 { left: 38%; --land: -300px; animation-duration: 4.3s; }
+.t44 { left: 29%; --land: -300px; animation-duration: 4.1s; }
+.t45 { left: 25%; --land: -300px; animation-duration: 3.5s; }
+.t46 { left: 42%; --land: -300px; animation-duration: 4.8s; }
+.t47 { left: 34%; --land: -300px; animation-duration: 4.5s; }
+.t48 { left: 22%; --land: -300px; animation-duration: 3.5s; }
+.t49 { left: 49%; --land: -300px; animation-duration: 4s; }
+.t50 { left: 61%; --land: -300px; animation-duration: 3.5s; }
+
+.fall:hover {
+    transform: translateX(-2px);
+}
+
+#explode:checked ~ .fall {
+    opacity: 0;
+    filter: blur(1px);
+    animation: explde 2s linear forwards;
+}
+
+#explode:checked ~ .t2 {
+    transform: translateX(-400px);
+    transition-delay: 1s;
+}
+#explode:checked ~ .t4 {
+    transform: translateX(-400px);
+    transition-delay: 0.9s;
+}
+#explode:checked ~ .t5 {
+    transform: translateX(-400px);
+    transition-delay: 1.2s;
+}
+#explode:checked ~ .t7 {
+    transform: translateX(-400px);
+    transition-delay: 1.3s;
+}
+#explode:checked ~ .t8 {
+    transform: translateX(-400px);
+    transition-delay: 1.4s;
+}
+#explode:checked ~ .t11 {
+    transform: translateX(-400px);
+    transition-delay: 1.5s;
+}
+#explode:checked ~ .t12 {
+    transform: translateX(-400px);
+    transition-delay: 1.6s;
+}
+#explode:checked ~ .t13 {
+    transform: translateX(-400px);
+    transition-delay: 0.8s;
+}
+
+
+#explode:checked ~ .t1 {
+    transform: translateX(400px);
+    transition-delay: 1s;
+}
+#explode:checked ~ .t3 {
+    transform: translateX(400px);
+    transition-delay: 0.9s;
+}
+#explode:checked ~ .t6 {
+    transform: translateX(400px);
+    transition-delay: 1.2s;
+}
+#explode:checked ~ .t9 {
+    transform: translateX(400px);
+    transition-delay: 1.3s;
+}
+#explode:checked ~ .t10 {
+    transform: translateX(400px);
+    transition-delay: 1.4s;
+}
+#explode:checked ~ .t3 {
+    transform: translateX(400px);
+    transition-delay: 1.55s;
+}
+#explode:checked ~ .t1 {
+    transform: translateX(400px);
+    transition-delay: 1.6s;
+}
+#explode:checked ~ .t3 {
+    transform: translateX(400px);
+    transition-delay: 0.8s;
+}
 
 
 @media screen and (max-width: 704px) {
